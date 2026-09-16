@@ -34,6 +34,12 @@ This ordering means the frozen judged run degrades gracefully rather than
 failing outright if any one dependency (API key, network, local GPU) isn't
 available at defence/replay time.
 
+**For fast local test runs:** set `CONFLICT_LLM_DISABLE=1` to skip both
+Gemini and Qwen entirely and go straight to the keyword heuristic. Without
+this, a routine test run across several hundred-report datasets (e.g.
+`compliance_test.py`) makes a live API call per correlated report — minutes
+instead of seconds, and it burns real quota for no benefit during iteration.
+
 ## System/user prompt template
 
 ```

@@ -152,11 +152,22 @@ def _call_ollama(prompt: str) -> Optional[bool]:
         return None
 
 
+def _llm_disabled() -> bool:
+    """Read fresh each call (not cached at import) so a test suite can set
+    this env var right before running and have it take effect immediately.
+    Set CONFLICT_LLM_DISABLE=1 to skip both Gemini and Qwen calls entirely
+    and fall straight through to the keyword heuristic — routine test runs
+    (e.g. compliance_test.py across several hundred-report datasets) would
+    otherwise make a live API call per correlated report, burning quota and
+    taking minutes instead of seconds."""
+    return os.environ.get("CONFLICT_LLM_DISABLE", "").strip().lower() in ("1", "true", "yes")
+
+
 def suggests_conflict_gemini(new_description: str, prior_description: str) -> Optional[bool]:
     """Primary backend. Returns True/False, or None if unavailable/failed
     (no API key, network error, exhausted quota/billing) — callers must
     treat None as "try the next fallback", never as False."""
-    if not new_description or not prior_description:
+    if _llm_disabled() or not new_description or not prior_description:
         return None
     prompt = PROMPT_TEMPLATE.format(
         prior_description=prior_description.replace('"', "'"),
@@ -169,7 +180,7 @@ def suggests_conflict_qwen(new_description: str, prior_description: str) -> Opti
     """Last-resort backend — only reachable in practice if you're running
     this locally with Ollama up; not something the submitted pipeline can
     assume is available. Kept for local dev/testing, not relied on."""
-    if not new_description or not prior_description:
+    if _llm_disabled() or not new_description or not prior_description:
         return None
     prompt = PROMPT_TEMPLATE.format(
         prior_description=prior_description.replace('"', "'"),
