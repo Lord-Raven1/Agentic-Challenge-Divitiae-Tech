@@ -10,6 +10,7 @@ import itertools
 from typing import List, Optional
 
 from models import CorrelationResult, Incident, Report
+from conflict_llm import suggests_conflict_gemini, suggests_conflict_qwen
 from matching import similarity, suggests_conflict, text_similarity
 
 STRONG_MATCH_THRESHOLD = 0.75
@@ -43,11 +44,33 @@ class IncidentTracker:
         relationship = self._classify_relationship(report, best_incident, best_score)
         # Only meaningful once there is prior evidence to hedge against or
         # contradict; a fresh incident's first report can't yet conflict.
-        conflict_candidate = (relationship != "DUPLICATE" and suggests_conflict(report.description))
+        conflict_candidate = False
+        if relationship != "DUPLICATE":
+            conflict_candidate = self._check_conflict(report, best_incident)
         self._apply(best_incident, report)
         return CorrelationResult(report=report, incident=best_incident,
                                   relationship=relationship, confidence=round(best_score, 2),
                                   conflict_candidate=conflict_candidate)
+
+    def _check_conflict(self, report: Report, incident: Incident) -> bool:
+        """Fallback order: Gemini -> keyword heuristic -> local Qwen. This is
+        accuracy order for the first two, then Qwen last — not because it's
+        least accurate (though it is), but because the keyword heuristic
+        needs no external service and always works, while Qwen needs Ollama
+        running locally and can't be assumed available wherever this
+        actually gets submitted/run. See conflict_llm.py for the measured
+        recall numbers behind this ordering."""
+        verdict = suggests_conflict_gemini(report.description, incident.last_description)
+        if verdict is not None:
+            return verdict
+
+        try:
+            return suggests_conflict(report.description)
+        except Exception:
+            pass
+
+        verdict = suggests_conflict_qwen(report.description, incident.last_description)
+        return bool(verdict)
 
     def _find_best_match(self, report: Report):
         best_incident, best_score = None, 0.0
