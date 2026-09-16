@@ -8,7 +8,7 @@ Guarantees:
 """
 import csv
 from datetime import datetime
-from typing import List
+from typing import Iterable, List
 
 from models import Report
 
@@ -54,25 +54,30 @@ def _parse_timestamp(raw: str):
 
 
 def parse_reports(csv_path: str) -> List[Report]:
-    reports: List[Report] = []
     with open(csv_path, newline="", encoding="utf-8-sig") as f:
-        reader = csv.DictReader(f)
-        for row_index, row in enumerate(reader):
-            report_id = (row.get("report_id") or "").strip()
-            if not report_id:
-                # A report with no ID cannot be tracked or referenced downstream; skip it.
-                continue
+        return parse_report_rows(csv.DictReader(f))
 
-            raw_timestamp = row.get("timestamp") or ""
-            reports.append(Report(
-                report_id=report_id,
-                row_index=row_index,
-                raw_timestamp=raw_timestamp,
-                timestamp=_parse_timestamp(raw_timestamp),
-                location=(row.get("location") or "").strip(),
-                category=(row.get("category") or "").strip().lower(),
-                reported_severity=(row.get("reported_severity") or "").strip().upper(),
-                description=(row.get("description") or "").strip(),
-                reporter_type=(row.get("reporter_type") or "").strip().lower(),
-            ))
+
+def parse_report_rows(rows: Iterable[dict]) -> List[Report]:
+    """Same guarantees as parse_reports, for rows already read from a CSV
+    (e.g. a file uploaded to the dashboard)."""
+    reports: List[Report] = []
+    for row_index, row in enumerate(rows):
+        report_id = (row.get("report_id") or "").strip()
+        if not report_id:
+            # A report with no ID cannot be tracked or referenced downstream; skip it.
+            continue
+
+        raw_timestamp = row.get("timestamp") or ""
+        reports.append(Report(
+            report_id=report_id,
+            row_index=row_index,
+            raw_timestamp=raw_timestamp,
+            timestamp=_parse_timestamp(raw_timestamp),
+            location=(row.get("location") or "").strip(),
+            category=(row.get("category") or "").strip().lower(),
+            reported_severity=(row.get("reported_severity") or "").strip().upper(),
+            description=(row.get("description") or "").strip(),
+            reporter_type=(row.get("reporter_type") or "").strip().lower(),
+        ))
     return reports
