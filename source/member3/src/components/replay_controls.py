@@ -44,6 +44,7 @@ def render_replay_controls(replay_engine: ReplayEngine):
         with b1:
             if st.button("Previous", use_container_width=True):
                 replay_engine.step_prev()
+                st.session_state["scrub_slider"] = replay_engine.current_tick_idx
                 st.session_state["is_playing"] = False
                 st.rerun()
         with b2:
@@ -55,15 +56,23 @@ def render_replay_controls(replay_engine: ReplayEngine):
         with b3:
             if st.button("Next", use_container_width=True):
                 replay_engine.step_next()
+                st.session_state["scrub_slider"] = replay_engine.current_tick_idx
                 st.session_state["is_playing"] = False
                 st.rerun()
         with b4:
             if st.button("Reset", use_container_width=True):
                 replay_engine.reset()
+                st.session_state["scrub_slider"] = replay_engine.current_tick_idx
                 st.session_state["is_playing"] = False
                 st.rerun()
 
     with col_slider:
+        # NOTE: once a widget with this `key` has rendered once, Streamlit
+        # ignores `value=` on every later rerun and uses
+        # st.session_state["scrub_slider"] instead — so Previous/Next/Reset/
+        # Play must write that key directly (above and below) whenever they
+        # move the engine's position, or their step gets silently reverted
+        # here on the very next rerun.
         slider_val = st.slider(
             "Scrub Report Position",
             min_value=0,
@@ -91,6 +100,7 @@ def render_replay_controls(replay_engine: ReplayEngine):
         if not replay_engine.is_finished:
             time.sleep(replay_engine.speed_seconds)
             replay_engine.step_next()
+            st.session_state["scrub_slider"] = replay_engine.current_tick_idx
             st.rerun()
         else:
             st.session_state["is_playing"] = False

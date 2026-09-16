@@ -53,7 +53,13 @@ def build_scenario_from_rows(
     )
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=(
+    "Running the agent pipeline across the full feed and all 4 rubric scenarios "
+    "(this makes a live Gemini API call per correlated report to check for "
+    "conflicting evidence, so first load takes roughly 2-3 minutes — this is "
+    "expected reasoning time, not a hang). Cached after this, so it only "
+    "happens once."
+))
 def load_all_scenarios() -> Dict[str, CampusScenario]:
     """Load all standard campus benchmark scenarios from campus_reports.csv."""
     scenarios: Dict[str, CampusScenario] = {}

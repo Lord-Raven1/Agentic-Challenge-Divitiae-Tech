@@ -16,7 +16,17 @@ python -m streamlit run source/member3/app.py
 python run_predictions.py --reports 04_Development_Data/campus_reports.csv --output predictions.jsonl --log decision_log.jsonl
 ```
 
-No environment variables or API keys are required.
+No environment variables or API keys are required to run the system — it
+works correctly without any of them (see "Conflict detection" below).
+
+**Note for judges/graders:** loading the full 150-report dev scenario (or
+switching to it) takes roughly 2-3 minutes the first time, because the
+agent makes a live Gemini API call to check for conflicting/contradictory
+evidence on every correlated report. This is expected, not a hang — the
+dashboard is actively reasoning, not stuck. Set `CONFLICT_LLM_DISABLE=1`
+before running either command above for an instant load using a much
+faster (but less accurate) keyword-based fallback instead; see
+`prompts/conflict_detection.md` for the measured accuracy tradeoff.
 
 ## Layout
 

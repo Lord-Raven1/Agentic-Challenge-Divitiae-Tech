@@ -81,6 +81,11 @@ def main():
         def on_scenario_change():
             st.session_state["replay_engine"] = ReplayEngine(scenarios[st.session_state["current_scenario_id"]])
             st.session_state["is_playing"] = False
+            # The scrub slider keeps its session-state value across scenario
+            # switches otherwise (see replay_controls.py note), which could
+            # desync it from the freshly reset engine if the old position
+            # happens to still be in-range for the new scenario.
+            st.session_state["scrub_slider"] = 0
 
         st.selectbox(
             "Select Scenario",
@@ -105,6 +110,7 @@ def main():
                     st.session_state["pending_scenario_id"] = new_scenario.scenario_id
                     st.session_state["replay_engine"] = ReplayEngine(new_scenario)
                     st.session_state["is_playing"] = False
+                    st.session_state["scrub_slider"] = 0
                     st.rerun()
 
         st.markdown("---")
