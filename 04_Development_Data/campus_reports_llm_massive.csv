@@ -1,0 +1,301 @@
+report_id,timestamp,location,category,reported_severity,description,reporter_type
+R3001,2026-09-16T08:05,Level 2 Library,MEDICAL,LOW,"Patient needs immediate attention, no ID card found.",staff
+R3002,,Level 2 Library,MEDICAL,LOW,Seems like a medical emergency.,student
+R3003,2026-09-16T08:10,,fire,HIGH,"Smoke seen coming from behind a locked door.",lecturer
+R3004,2026-09-16T08:15,Sports Centre,environmental,MEDIUM,"Trash scattered in the gym area.",security
+R3005,garbled-not-a-date,Sports Centre,environmental,MEDIUM,"Trash everywhere, smell of garbage.",staff
+R3006,2026-09-16T08:20,Engineering Block E3,fire,,Student reported smoke in electrical room.,staff
+R3007,2026-09-16T08:25,Engineering Block E3,it,MEDIUM,"Computer malfunctioning, can't connect to network.",student
+R3008,,Engineering Block E3,it,MEDIUM,"Computer won't turn on, power cord damaged.",staff
+R3011,2026-09-16T08:40,Sports Centre,medical,critical,"Student fainting, no ID card found.",staff
+R3012,2026-09-16T08:45,Engineering Block E3,it,MEDIUM,"Printer not printing, needs repair.",student
+R3014,2026-09-16T08:55,,Library Level 2,fire,"Smoke detected, no one injured, calling for assistance.",staff
+R3015,2026-09-16T09:00,Sports Centre,medical,MEDIUM,"Student needs help with medical form filling out.",staff
+R3016,2026-09-16T09:05,Engineering Block E3,it,LOW,"Printer not printing, needs repair.",student
+R3017,2026-09-16T09:10,Library Level 2,it,MEDIUM,"Computer malfunctioning, can't connect to network.",staff
+R3018,,Library Level 2,it,MEDIUM,"Computer won't turn on, power cord damaged.",student
+R3019,2026-09-16T09:15,Sports Centre,medical,critical,"Student needs help with medical form filling out.",staff
+R3020,2026-09-16T09:20,Engineering Block E3,security,LOW,"Unknown figure seen near the entrance.",staff
+R3031,2026-09-16T08:15,Library Level 2,facilities,MEDIUM,"A light fixture is flickering.",staff
+R3032,,Library Level 2,facilities,MEDIUM,"The floor seems wet, but no puddles.",student
+R3034,2026-09-16T13:00,Engineering Block E3,it,MEDIUM,"The network is down.",staff
+R3035,2026-09-16T09:30,Medical Center,medical,critical,"Patient needs immediate attention.",staff
+R3036,,Sports Centre,medical,HIGH,"Someone collapsed, medical assistance is needed.",student
+R3037,2026-09-16T10:45,Academic Building,accessibility,MEDIUM,"Stairs are slippery.",student
+R3038,2026-09-16T11:00,Engineering Block E3,security,LOW,"Someone found a suspicious object.",staff
+R3039,2026-09-16T12:15,Environmental Services,environmental,HIGH,"There's a gas leak.",staff
+R3040,2026-09-16T14:00,Engineering Block E3,cleaning,LOW,"The floor needs mopping.",student
+R3061,2026-09-16T08:30, ,facilities,MEDIUM,,staff  
+R3062,, , ,CRITICAL,"Someone in the dormitory has been found dead.",student  
+R3064,2026-09-16T08:30, ,fire,MEDIUM,Fire in the computer lab.,staff  
+R3065,garbled-2026-09-16T08:40, ,fire,LOW,"There seems to be an issue with the sprinklers.",student  
+R3067,2026-09-16T09:20, ,it,MEDIUM,"The printer is not working.",staff  
+R3068,, , ,CRITICAL,"Student 502 has been found dead.",lecturer  
+R3069,2026-09-16T09:25, ,fire,HIGH,"A smoke detector has gone off in the dormitory.",staff  
+R3071,2026-09-16T09:35, ,it,LOW,"The monitor in the computer lab is not working.",student  
+R3072,2026-09-16T09:40, ,fire,CRITICAL,"A fire alarm has been triggered in the dormitory.",staff  
+R3073,2026-09-16T09:45, ,medical,MEDIUM,"A student has fallen and injured their arm.",staff  
+R3074,2026-09-16T09:50, ,security,MEDIUM,"A student has been found with their backpack missing.",student  
+R3075,2026-09-16T09:55, ,facilities,HIGH,"The elevators are not functioning.",lecturer  
+R3076,2026-09-16T10:00, , ,CRITICAL,"Someone has been found missing.",staff  
+R3077,2026-09-16T10:05, ,it,MEDIUM,"The printer is jammed.",student  
+R3078,2026-09-16T10:10, ,fire,LOW,"A smoke detector has gone off in the dormitory.",staff  
+R3079,2026-09-16T10:15, ,medical,CRITICAL,"A student has been found with a broken arm.",staff  
+R3080,2026-09-16T10:20, ,security,HIGH,"A student has been found with their backpack stolen.",student
+R3091,2026-09-16T08:05,,fire,HIGH,"There are smoke detectors beeping.",security  
+R3092,,Engineering Block E3,it,LOW,Computer stopped working.,student  
+R3093,2026-09-16 08:12,Library Level 2,fire,,Smoke visible under the stairs.,staff  
+R3094,2026-09-16T08:30,Medical Center,medical,CRITICAL,"Patient's blood pressure is dropping.",staff  
+R3096,2026-09-16T08:50,,Environmental,fail,Drainage system is clogged.,staff  
+R3097,2026-09-16 09:05,,facilities,LOW,"Water heater is not heating water.",staff  
+R3098,R3099,2026-09-16T09:20,Electrical,HIGH,"Electricity flickers and then goes out.",student  
+R3099,2026-09-16 09:35,,Cleaning,CRITICAL,"Trash bins are overflowing and smelly.",security  
+R3100,2026-09-16T09:50,,Environmental,MEDIUM,"Leaves are blocking the air vents.",staff  
+R3101,2026-09-16 10:05,,Security,MEDIUM,"Someone has damaged the security camera.",staff  
+R3102,2026-09-16T10:20,Library Level 1,security,,Security has been breached.,staff  
+R3103,2026-09-16 10:35,,Environmental,MEDIUM,"Water is pooling in the parking lot.",student  
+R3104,2026-09-16T10:50,Engineering Block E2,it,,The printer isn't printing any documents.,student  
+R3105,2026-09-16 11:05,,Security,CRITICAL,"Someone is seen loitering around the campus entrance.",staff  
+R3106,2026-09-16T11:20,,Environmental,LOW,"The air is not fresh and has a musty smell.",student  
+R3107,2026-09-16 11:35,,facilities,LOW,"The air conditioners aren't working properly.",staff  
+R3108,2026-09-16T11:50,,Environmental,HIGH,"The outdoor lights are not working.",student  
+R3109,2026-09-16 12:05,,Security,MEDIUM,"The alarm system is not working.",staff  
+R3110,2026-09-16T12:20,,Environmental,CRITICAL,"The fire extinguishers are not accessible.",student
+R3121,2026-09-16T08:05,,fire,HIGH,There seems to be a significant power outage.,staff
+R3122,,Engineering Block E3,it,MEDIUM,"The IT server room is not responding.",student
+R3123,2026-09-16 08:10,Library Level 2,medical,,A student is unresponsive.,staff
+R3124,2026-09-16T08:15,,fire,HIGH,Smoke observed in the corridor.,student
+R3125,2026-09-16 08:20,Medical Center,accessibility,,Wheelchair access is blocked by a fallen piece of furniture.,staff
+R3126,2026-09-16T08:30,,fire,LOW,"Smoke has been observed.",student
+R3127,2026-09-16T08:35,Engineering Block E3,security,MEDIUM,"Someone is loitering near the exit.",staff
+R3128,,Engineering Block E3,it,CRITICAL,"The network is down.",student
+R3129,2026-09-16T08:40,Library Level 2,facilities,MEDIUM,"A computer is not working.",staff
+R3130,2026-09-16T08:45,,security,MEDIUM,"There is an unauthorized person in the area.",student
+R3131,2026-09-16T08:50,Engineering Block E3,fire,CRITICAL,"Emergency broadcast is not functioning.",staff
+R3132,2026-09-16 08:55,Medical Center,it,LOW,"The computer lab is offline.",student
+R3133,2026-09-16T09:00,,environmental,MEDIUM,"The recycling bins are overflowing.",staff
+R3134,2026-09-16 09:05,Library Level 2,facilities,MEDIUM,"A book is missing from the shelves.",student
+R3135,2026-09-16T09:10,,security,HIGH,"The security camera is not working.",staff
+R3136,2026-09-16 09:15,Engineering Block E3,facilities,LOW,"The printer is offline.",student
+R3137,2026-09-16T09:20,Library Level 2,it,CRITICAL,"The IT helpdesk phone line is not working.",staff
+R3138,2026-09-16 09:25,,fire,MEDIUM,"Smoke is visible near the windows.",student
+R3139,2026-09-16T09:30,Engineering Block E3,facilities,CRITICAL,"The elevators are not working.",staff
+R3151,2026-09-16T08:30,,fire,MEDIUM,"A pot was left on the stove and has started to smoke.",staff
+R3152,2026-09-16T08:35,,fire,,A pot was left on the stove and has started to smoke.,staff
+R3153,,2026-09-16 09:00,medical,HIGH,"Someone is experiencing severe chest pains and shortness of breath.",student
+R3154,2026-09-16T09:10,Sports Centre,fire,,"There are signs of fire in the kitchen area.",security
+R3156,2026-09-16T09:25,Engineering Block E3,security,,"Someone is seen loitering near the entrance.",staff
+R3157,,2026-09-16 10:00,facilities,MEDIUM,"The printer in the library is not working.",student
+R315E,2026-09-16T11:00,Engineering Block E3,it,HIGH,"The computer lab is not working and the servers are offline.",student
+R315I,2026-09-16T11:40,Engineering Block E3,it,CRITICAL,"The computer lab is not working and the servers are offline.",student
+R3181,2026-09-16T08:15,Library Level 2,facilities,MEDIUM,"A student is using the computer lab.",student
+R3182,,Library Level 2,fire,HIGH,Smoke seen coming from a ceiling vent.,lecturer
+R3183,2026-09-16 08:22,Library Level 2,it,MEDIUM,"The printer is not working.",staff
+R3184,2026-09-16T08:30,Medical Center,medical,CRITICAL,"Patient is unconscious and not breathing.",staff
+R3185,2026-09-16T08:35,Sports Centre,accessibility,Critical,"Steps are wet and covered in ice.",security
+R3186,,Engineering Block E3,security,CRITICAL,"Saw a security camera monitor being tampered with.",staff
+R3187,2026-09-16T09:00,Library Level 1,facilities,LOW,"The WiFi is not working.",student
+R3188,2026-09-16 09:05,Engineering Block E3,security,HIGH,"Someone is trying to use the printer.",student
+R3189,2026-09-16T09:10,Library Level 2,fire,CRITICAL,"Saw smoke coming from a broken pipe.",staff
+R31810,,Library Level 2,environmental,LOW,"Some plants are wilting.",lecturer
+R31811,2026-09-16T09:15,Engineering Block E3,security,MEDIUM,"There are stains on the carpet.",student
+R31812,2026-09-16T09:20,Library Level 1,electrical,CRITICAL,"The lights are not working.",staff
+R31813,2026-09-16T09:25,Sports Centre,cleaning,HIGH,"Wet floors were not cleaned.",staff
+R31814,,Library Level 2,cleaning,MEDIUM,"The toilet is broken.",lecturer
+R31815,2026-09-16T09:30,Engineering Block E3,security,LOW,"Someone is trying to use the copier.",staff
+R31816,2026-09-16T09:35,Library Level 1,fire,CRITICAL,"Saw smoke coming from a computer.",student
+R31817,,Library Level 2,it,CRITICAL,"The monitors are not working.",lecturer
+R31818,2026-09-16T09:40,Engineering Block E3,security,LOW,"Someone is trying to use the copier.",staff
+R31819,2026-09-16T09:45,Library Level 2,environmental,HIGH,"The air conditioning is not working.",student
+R31820,2026-09-16T09:50,Engineering Block E3,cleaning,CRITICAL,"The trash bins are overflowing.",staff
+R3211,2026-09-16T08:05,,fire,HIGH,The lights flicker and then go out.,staff  
+R3212,,Engineering Block E3,it,LOW,There's a pop and a hiss coming from the computer room.,student  
+R3213,2026-09-16 08:10,Sports Centre,medical,,A student is complaining of chest pains.,doctor  
+R3214,2026-09-16T08:15,Library Level 2,environmental,CRITICAL,Smoke is coming from the HVAC ducts.,security  
+R3215,2026-09-16T08:20,,fire,MEDIUM,Smoke is visible in the stairwell.,staff  
+R3216,2026-09-16T08:25,,fire,CRITICAL,Fire is spotted in the kitchen area.,security  
+R3217,2026-09-16T08:30,Engineering Block E3,fire,MEDIUM,Computer server is on fire.,student  
+R3218,,Sports Centre,medical,LOW,A student is experiencing a seizure.,doctor  
+R3219,2026-09-16T08:35,Library Level 2,facilities,CRITICAL,Water is leaking from the ceiling.,staff  
+R3220,2026-09-16T08:40,Engineering Block E3,it,CRITICAL,The monitor has stopped working.,student  
+R3221,2026-09-16T08:45,,fire,HIGH,Smoke is detected in the basement.,staff  
+R3222,2026-09-16T08:50,Library Level 2,fire,LOW,A student has a bad fall.,security  
+R3223,,Library Level 2,it,CRITICAL,The printer is not printing.,student  
+R3224,2026-09-16T08:55,,fire,LOW,A student has tripped and fallen.,staff  
+R3225,2026-09-16T09:00,Engineering Block E3,environmental,CRITICAL,Sounds of water running in a non-functioning toilet.,security  
+R3226,2026-09-16T09:05,Library Level 2,security,MEDIUM,There are strange noises coming from the storage room.,student  
+R3227,2026-09-16T09:10,Engineering Block E3,facilities,HIGH,The door to the elevator is jammed.,staff  
+R3228,2026-09-16T09:15,,fire,CRITICAL,Smoke is visible in the corridor.,security  
+R3229,2026-09-16T09:20,,fire,LOW,The smoke detector is beeping.,staff  
+R3230,2026-09-16T09:25,Library Level 2,medical,CRITICAL,Student is unresponsive.,security
+R3241,2026-09-16T08:05,,it,LOW,There seems to be a power outage.,staff
+R3243,2026-09-16 08:12,,medical,LOW,"Patient has been seen, no serious injuries.",staff
+R3244,2026-09-16T08:20,Sports Centre,facilities,MEDIUM,Seating is broken in the stands.,student
+R3245,,Engineering Block E3,security,HIGH,"Someone left a bag behind in the lab.",staff
+R3246,2026-09-16T08:30,Sports Centre,medical,,A student fainted during the event.,staff
+R3247,2026-09-16 08:45,Sports Centre,environmental,CRITICAL,"There are scattered trash bins overflowing.",student
+R3248,2026-09-16T08:50,Engineering Block E3,it,LOW,"The network is down, can't access the server room.",staff
+R3249,2026-09-16T09:00,Sports Centre,facilities,MEDIUM,"The bleachers are creaking and may need to be replaced soon.",staff
+R3250,,Engineering Block E3,it,,Server room lights aren't working.,student
+R3251,2026-09-16T09:15,Sports Centre,facilities,MEDIUM,"The shower facilities are out of hot water.",staff
+R3252,2026-09-16T09:20,Sports Centre,it,LOW,"The Wi-Fi connection is slow and unreliable.",student
+R3253,2026-09-16 10:00,Sports Centre,security,HIGH,"Someone was caught loitering around the perimeter.",staff
+R3254,2026-09-16T10:10,Engineering Block E3,environmental,CRITICAL,"There is a strong odor of mold in the ventilation system.",student
+R3255,2026-09-16T10:20,Sports Centre,security,,A suspect was found hiding in the restrooms.,staff
+R3257,2026-09-16T10:40,Sports Centre,it,LOW,"The printer is malfunctioning, can't print documents.",staff
+R3258,2026-09-16T10:50,Sports Centre,facilities,HIGH,"The door to the main entrance is jammed.",student
+R3259,2026-09-16T11:00,Sports Centre,security,CRITICAL,"Several security cameras are not working.",staff
+R3271,2026-09-16T08:05,,fire,HIGH,There seems to be a fire in the storage room.,staff
+R3272,,Engineering Block E4,fire,MEDIUM,Fire in the electronics lab.,student
+R3273,2026-09-16 08:20,,medical,HIGH,Student reported difficulty breathing.,lecturer
+R3274,2026-09-16T08:30,,security,LOW,"Someone attempted to break into the computer lab.",staff
+R3275,,Library Level 1,facilities,MEDIUM,"Some computers are not working properly.",student
+R3276,2026-09-16T09:00,Engineering Block E5,it,HIGH,"Computers are freezing and crashing.",staff
+R3277,2026-09-16T09:15,,fire,MEDIUM,Smoke in the faculty lounge.,student
+R3278,2026-09-16T09:30,,accessibility,CRITICAL,"Wheelchair ramp is wet and non-functional.",lecturer
+R3279,2026-09-16T10:00,,fire,HIGH,"Emergency exit door is jammed.",security
+R3280,,Library Level 2,fire,MEDIUM,"Furniture is blocking the fire exit.",staff
+R3281,2026-09-16T10:15,Engineering Block E6,security,MEDIUM,"Parking lot lights are out.",student
+R3282,2026-09-16T11:00,,fire,MEDIUM,"Smoke detector is not working.",staff
+R3283,2026-09-16T11:15,,fire,MEDIUM,"Emergency lights are not working.",student
+R3284,2026-09-16T12:00,Library Level 3,fire,HIGH,"Fire alarm is not sounding.",staff
+R3285,2026-09-16T12:15,,it,MEDIUM,"Computer network is down.",student
+R3286,,Engineering Block E7,facilities,CRITICAL,"No water in the potable water system.",lecturer
+R3287,2026-09-16T13:00,Engineering Block E8,environmental,HIGH,"Tree is blocking the air intake vent.",staff
+R3288,,Library Level 4,security,CRITICAL,"Security camera in the lobby is not working.",student
+R3289,2026-09-16T14:00,Engineering Block E9,fire,MEDIUM,"Fire alarm is still sounding.",staff
+R3290,2026-09-16T14:15,,fire,MEDIUM,"Fire alarm is still sounding.",student
+R3301,2026-09-16T08:05,Engineering Block E3,fire,MEDIUM,Someone reported a power outage.,staff
+R3302,,Engineering Block E3,it,MEDIUM,"The computer lab is not accessible, the door is jammed.",student
+R3303,2026-09-16 08:10,Library Level 3,medical,critical,"A student is bleeding from the head.",staff
+R3304,2026-09-16 08:15,,fire,HIGH,"Please evacuate the area immediately.",security
+R3305,2026-09-16T08:20,Student Center,security,MEDIUM,"Someone saw a suspicious person at the entrance.",staff
+R3306,,Engineering Block E3,facilities,LOW,"The elevators are not working.",student
+R3307,2026-09-16T08:25,Engineering Block E2,it,MEDIUM,"The internet connection is slow.",student
+R3308,2026-09-16 08:30,Engineering Block E1,medical,critical,"A student is having a seizure.",staff
+R3309,2026-09-16T08:35,Engineering Block E4,it,MEDIUM,"The printer is not working.",staff
+R3310,,Engineering Block E5,facilities,LOW,"The heating system is not heating.",student
+R3311,2026-09-16T08:40,Engineering Block E6,fire,HIGH,"There is smoke coming from the ceiling.",staff
+R3312,2026-09-16T08:45,Engineering Block E7,facilities,MEDIUM,"The vending machine is broken.",student
+R3313,2026-09-16 08:50,Engineering Block E8,security,MEDIUM,"Someone parked in a handicapped spot.",staff
+R3314,2026-09-16T08:55,Engineering Block E9,environmental,MEDIUM,"The air conditioning is not working.",student
+R3315,,Engineering Block E10,fire,HIGH,"Emergency exit is blocked.",staff
+R3316,2026-09-16T09:00,Engineering Block E11,accessibility,MEDIUM,"The elevator is not accessible to wheelchairs.",student
+R3317,2026-09-16 09:05,Engineering Block E12,it,MEDIUM,"The server room is not connected to the network.",staff
+R3318,,Engineering Block E13,security,MEDIUM,"Someone was seen using a locked office.",student
+R3319,2026-09-16T09:10,Engineering Block E14,facilities,HIGH,"The toilet is not flushing.",staff
+R3320,2026-09-16 09:15,Engineering Block E15,it,MEDIUM,"The network is not functioning properly.",student
+R3331,2026-09-16T08:05,,facilities,MEDIUM,There is a leak under the stairwell.,staff  
+R3332,,Engineering Block E3,fire,HIGH,Smoke seen coming from the electrical room.,student  
+R3334,2026-09-16T08:15,Library,medical,Someone needs to be checked, no response.,security  
+R3335,2026-09-16 08:20,,facilities,LOW,The water heater is noisy.,staff  
+R3336,2026-09-16T08:30,Engineering Block E3,security,HIGH,Found a suspicious package by the entrance.,security  
+R3337,2026-09-16 08:35,,facilities,CRITICAL,"The toilet in the men's bathroom is blocked, please clear it.",staff  
+R3338,,Sports Centre,medical,LOW,"Student has a fever and is feeling unwell.",staff  
+R3339,2026-09-16T08:40,,fire,CRITICAL,"There is a fire in the HVAC room.",staff  
+R3340,2026-09-16T08:45,Library,fire,HIGH,"There is smoke and flames in the break room.",staff  
+R3341,,Engineering Block E3,it,LOW,"The printer is not functioning properly.",student  
+R3342,2026-09-16 08:50,Engineering Block E3,fire,HIGH,"Smoke is visible and the smell of burning is present.",student  
+R3343,2026-09-16T08:55,Sports Centre,facilities,LOW,"The water fountain is broken.",student  
+R3344,2026-09-16 08:55,,it,CRITICAL,"The computer lab is down, cannot connect to the internet.",staff  
+R3345,2026-09-16T09:00,,environmental,LOW,"The air quality is poor due to construction noise.",staff  
+R3346,2026-09-16 09:05,Engineering Block E3,security,HIGH,"Found a note with an unknown message.",student  
+R3347,2026-09-16T09:10,Library,fire,MEDIUM,"There is smoke and some flames in the reading room.",staff  
+R3348,2026-09-16 09:15,Engineering Block E3,security,CRITICAL,"The door is stuck and can't be opened.",student  
+R3349,2026-09-16T09:20,Library,medical,LOW,"Student is coughing and has a runny nose.",staff  
+R3350,2026-09-16 09:25,Engineering Block E3,it,HIGH,"The server room is not accessible and cannot be used.",staff
+R3361,2026-09-16T08:45,,fire,HIGH,There seems to be a problem with the emergency lighting.,staff
+R3362,,Engineering Block E3,fire,HIGH,,student
+R3363,2026-09-16 08:30,Sports Centre,medical,critical,"Student is unresponsive and having trouble breathing.",nurse
+R3364,2026-09-16T08:30,Health Centre,medical,critical,"Student has fallen and may have a concussion.",doctor
+R3365,2026-09-16T09:00,,it,LOW,"My computer won't turn on.",staff
+R3367,2026-09-16T09:05,Sports Centre,medical,critical,"Student is vomiting and has a fever.",doctor
+R3368,2026-09-16T09:10,,it,MEDIUM,"My printer isn't working.",student
+R3369,2026-09-16T09:15,Library,fire,HIGH,Fire in the book storage area.,student
+R3370,2026-09-16T09:20,Library,fire,HIGH,Fire spreading in the lower levels.,staff
+R3371,2026-09-16T09:30,Engineering Block E3,accessibility,LOW,"Stairs are wet and slippery.",student
+R3372,2026-09-16T09:35,,environmental,MEDIUM,"There's a large puddle in the courtyard.",staff
+R3373,2026-09-16T09:40,Library,security,HIGH,"Someone is trying to break into the library.",staff
+R3374,2026-09-16T09:45,Engineering Block E3,it,HIGH,"My tablet won't connect to the Wi-Fi.",student
+R3375,2026-09-16T09:50,Sports Centre,security,HIGH,"I saw someone hiding near the entrance.",staff
+R3376,2026-09-16T09:55,Engineering Block E3,fire,CRITICAL,"Fire in the storage room.",student
+R3377,2026-09-16T10:00,,it,LOW,"My computer is running very slow.",staff
+R3378,2026-09-16T10:05,,it,HIGH,"My computer is not booting up.",student
+R3379,2026-09-16T10:10,Engineering Block E3,it,HIGH,"I can't find my file.",student
+R3391,2026-09-16T08:15,,fire,HIGH,There seems to be a power outage affecting multiple classrooms.,staff
+R3392,,Engineering Block E3,it,,Some computers are not responding to network requests.,student
+R3393,2026-09-16 08:22,,fire,HIGH,Smoke reported in the corridor.,lecturer
+R3394,2026-09-16T10:00,Health Center,medical,critical,"I think someone might have an allergic reaction.",security
+R3395,garbled-not-a-date,Sports Centre,medical,,A student player is injured and needs medical attention.,student
+R3396,2026-09-16T08:30,,medical,critical,"Student is vomiting and has a high fever.",staff
+R3397,,Engineering Block E3,it,,The printer is malfunctioning and won't print documents.,student
+R3398,2026-09-16T09:00,,security,LOW,"Someone has parked a car in a handicapped parking space.",staff
+R3399,2026-09-16T09:15,,security,LOW,The vending machine is not accepting coins.,student
+R3400,2026-09-16T10:30,Library,accessibility,critical,"The lift is out of service, no elevator available for wheelchair users.",staff
+R3401,2026-09-16T08:45,Engineering Block E3,it,,The internet is slow and unresponsive.,staff
+R3402,2026-09-16T09:45,Library,environmental,,There is a strong smell of something burning outside the library.,student
+R3404,2026-09-16T11:15,Engineering Block E3,it,,The AC unit is not cooling the room.,staff
+R3405,,Engineering Block E3,it,,The AC unit is not cooling the room.,staff
+R3406,2026-09-16T11:30,,fire,HIGH,Smoke detected in the kitchen area.,student
+R3407,2026-09-16T12:00,Engineering Block E3,it,,The printer is malfunctioning and won't print documents.,student
+R3408,2026-09-16T12:15,,fire,HIGH,Smoke detected in the kitchen area.,student
+R3409,2026-09-16T12:30,Engineering Block E3,it,,The printer is malfunctioning and won't print documents.,student
+R3410,2026-09-16T12:45,,fire,HIGH,Smoke detected in the kitchen area.,student
+R3421,2026-09-16T08:05,,fire,MEDIUM,Student found unconscious in elevator.,staff  
+R3422,,Engineering Block E4,fire,,No further details provided.,student  
+R3423,2026-09-16T08:10,Student Lounge,medical,,Student needs medical attention.,staff  
+R3424,2026-09-16T08:15,,fire,HIGH,"Smoke seen coming from a vent near the HVAC system.",staff  
+R3425,2026-09-16T08:20,,it,,Network outage affecting student accounts.,staff  
+R3426,R3427,Engineering Block E5,facilities,MEDIUM,Power surge damaged computer lab.,student  
+R3427,2026-09-16T08:25,Engineering Block E5,medical,LOW,"Student cut on the arm, needs bandage.",student  
+R3428,2026-09-16T08:30,Student Lounge,security,,Student reported seeing a stranger in the room.,staff  
+R3429,2026-09-16T08:35,,fire,HIGH,"Felt heat on roof, no visible smoke.",staff  
+R3432,2026-09-16T08:50,Science Building,accessibility,LOW,"Wheelchair ramp not accessible.",staff  
+R3433,2026-09-16T08:55,,fire,HIGH,Detected a strong odor of burning plastic.,student  
+R3434,2026-09-16T09:00,,fire,MEDIUM,Student reported seeing smoke from another room.,staff  
+R3435,2026-09-16T09:05,,fire,HIGH,"Saw smoke coming from behind the building.",student  
+R3436,2026-09-16T09:10,Engineering Block E6,security,CRITICAL,"Security badge lost, suspect of theft.",staff  
+R3437,R3438,Engineering Block E6,facilities,MEDIUM,"Power outage causing system downtime.",student  
+R3438,2026-09-16T09:15,Engineering Block E6,it,,Student reported email service disruption.,staff  
+R3439,2026-09-16T09:20,,fire,HIGH,"Felt heat on window, no visible smoke.",student  
+R3440,2026-09-16T09:25,,fire,MEDIUM,Detected a strong smell of burning wood.,staff
+R3451,2026-09-16T08:05,,fire,MEDIUM,A computer malfunction in the IT lab.,staff
+R3452,,2026-09-16 08:10,facilities,MEDIUM,Some lights are not working in the library.,student
+R3453,2026-09-16T08:15,Engineering Block E3,fire,,High temperatures detected in the server room.,security
+R3454,2026-09-16 08:20,Medical Wing,medical,HIGH,An elderly patient is in distress.,nurse
+R3455,,2026-09-16 08:25,accessibility,HIGH,Stairs are slippery and need immediate attention.,visitor
+R3456,2026-09-16T08:30,Library,fire,,A fire alarm has been triggered.,security
+R3457,2026-09-16T08:35,,security,HIGH,"The network is down, I can't access the server.",staff
+R3458,2026-09-16 08:40,Academic Building,electrical,LOW,The air conditioning unit is not cooling.,student
+R3459,2026-09-16T08:45,,it,MEDIUM,"I need to reset my account, it's not working.",staff
+R34510,2026-09-16T08:50,,fire,HIGH,Fire in the break room area.,visitor
+R34511,2026-09-16 08:55,,security,MEDIUM,"I can't find the copy machine, it's missing from the list.",staff
+R34512,2026-09-16T09:00,Academic Building,environmental,,The HVAC system is producing mold.,security
+R34513,2026-09-16 09:05,,fire,CRITICAL,"An unknown smoke smell in the lab.",student
+R34514,2026-09-16T09:10,,security,MEDIUM,"The door to the lab is jammed.",staff
+R34515,2026-09-16 09:15,,fire,MEDIUM,"The smell of burning plastic in the lab.",student
+R34516,2026-09-16T09:20,Academic Building,security,,Someone is watching me in the hallway.,visitor
+R34517,2026-09-16 09:25,,fire,HIGH,Alarm has been sounded in the lab.,staff
+R34518,2026-09-16T09:30,,it,MEDIUM,"My password has been changed.",staff
+R34519,2026-09-16 09:35,Academic Building,fire,,Fire alarm triggered in the lab.,staff
+R34520,2026-09-16T09:40,,security,HIGH,Someone is following me.,visitor
+R3481,2026-09-16T08:15,Library Level 2,facilities,MEDIUM,"A light is flickering.",staff
+R3482,,Library Level 2,facilities,MEDIUM,Leak appears worse than before.,student
+R3483,2026-09-16T08:22,,fire,HIGH,Smoke reported near the electrical panel.,lecturer
+R3484,garbled-not-a-date,Engineering Block E3,fire,,No further detail was given.,security
+R3485,2026-09-16 08:30,Sports Centre,medical,critical,"Student collapsed, unresponsive, ambulance requested.",staff
+R3486,2026-09-16T08:35,,it,LOW,Technical issues with the printer.,student
+R3487,2026-09-16T09:10,,security,HIGH,Someone suspicious seen near the entrance.,staff
+R3488,R3489,2026-09-16T09:22,fire,CRITICAL,"Fire breaking out in the kitchen area.",staff
+R3489,2026-09-16T09:22,,fire,HIGH,Fire breaking out in the kitchen area.,staff
+R3490,2026-09-16T10:00,Library,accessibility,LOW,"Steps are wet and unclear.",student
+R3491,2026-09-16T10:05,,fire,CRITICAL,"Fire spreading rapidly through the corridor.",staff
+R3492,2026-09-16T10:10,,it,MEDIUM,"Computer malfunctioning, can't connect to network.",student
+R3493,2026-09-16T10:15,Engineering Block E3,environmental,HIGH,"Heavy rain causing flooding in the area.",staff
+R3494,2026-09-16T10:20,,fire,HIGH,"Large smoke plume visible from the window.",staff
+R3495,2026-09-16T10:25,,security,LOW,"Person walking in the wrong direction in the hall.",student
+R3496,2026-09-16T10:30,Library,fire,HIGH,"Emergency, evacuate the building.",staff
+R3497,2026-09-16T10:35,,fire,MEDIUM,"Fire detected in the classroom.",student
+R3498,2026-09-16T10:40,,security,HIGH,"Suspicious activity in the parking lot.",staff
+R3499,2026-09-16T10:45,,it,LOW,"Printer is not printing, manual intervention required.",student
+R3500,2026-09-16T10:50,,medical,CRITICAL,"Patient unresponsive, immediate medical attention needed.",staff
