@@ -5,7 +5,7 @@ import json
 import os
 import sys
 import traceback
-from typing import List
+from typing import Iterable, Iterator, List, Tuple
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _MEMBER1 = os.path.join(os.path.dirname(_HERE), "member1")
@@ -25,20 +25,20 @@ DEFAULT_REPORTS = os.path.join(REPO_ROOT, "04_Development_Data", "campus_reports
 DEFAULT_SERVICES = os.path.join(REPO_ROOT, "04_Development_Data", "campus_services.csv")
 
 
-def run(reports_csv: str = DEFAULT_REPORTS, services_csv: str = DEFAULT_SERVICES,
-        output_path: str = "predictions.jsonl", log_path: str = None) -> List[dict]:
+def process_reports(reports: Iterable, services_csv: str = DEFAULT_SERVICES) -> Iterator[Tuple[object, dict, dict]]:
+    """Yield (report, prediction, log_row) per report, in input order. Shared by
+    run() and the dashboard so both always show the same decisions."""
     directory = ServiceDirectory(services_csv)
     tracker = IncidentTracker()
     engine = DecisionEngine(directory)
 
-    predictions, log_rows = [], []
-    for report in parse_reports(reports_csv):
+    for report in reports:
         correlation = None
         try:
             correlation = tracker.process(report)
             decision: Decision = engine.decide(correlation)
             prediction = decision.prediction
-            log_rows.append({
+            log_row = {
                 **prediction,
                 "reason": decision.reason,
                 "timestamp": report.raw_timestamp,
@@ -47,7 +47,7 @@ def run(reports_csv: str = DEFAULT_REPORTS, services_csv: str = DEFAULT_SERVICES
                 "description": report.description,
                 "reporter_type": report.reporter_type,
                 "incident": decision.incident_snapshot,
-            })
+            }
         except Exception:  # never drop a report: emit a flagged safe line
             traceback.print_exc()
             prediction = DecisionEngine.fallback_prediction(
@@ -55,9 +55,17 @@ def run(reports_csv: str = DEFAULT_REPORTS, services_csv: str = DEFAULT_SERVICES
                 correlation.incident.incident_id if correlation else None,
                 correlation.relationship if correlation else "NEW",
             )
-            log_rows.append({**prediction, "reason": "internal error: flagged for human review"})
+            log_row = {**prediction, "reason": "internal error: flagged for human review"}
         validate_prediction(prediction, directory.ids)
+        yield report, prediction, log_row
+
+
+def run(reports_csv: str = DEFAULT_REPORTS, services_csv: str = DEFAULT_SERVICES,
+        output_path: str = "predictions.jsonl", log_path: str = None) -> List[dict]:
+    predictions, log_rows = [], []
+    for _, prediction, log_row in process_reports(parse_reports(reports_csv), services_csv):
         predictions.append(prediction)
+        log_rows.append(log_row)
 
     with open(output_path, "w", encoding="utf-8", newline="\n") as f:
         for prediction in predictions:

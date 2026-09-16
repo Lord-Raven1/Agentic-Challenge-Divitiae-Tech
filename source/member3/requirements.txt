@@ -1,0 +1,5 @@
+rapidfuzz
+streamlit>=1.35.0
+plotly>=5.20.0
+pandas>=2.2.0
+pydantic>=2.7.0
