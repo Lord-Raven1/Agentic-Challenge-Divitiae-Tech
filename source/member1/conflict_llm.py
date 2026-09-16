@@ -54,7 +54,7 @@ GEMINI_API_URL_TEMPLATE = (
 )
 GEMINI_TIMEOUT_SECONDS = 15
 GEMINI_MAX_RETRIES = 3
-GEMINI_FREE_TIER_MIN_INTERVAL = 1.5  # seconds; conservative floor — real limit is enforced by the 429 retry/backoff below, this just avoids hammering needlessly
+GEMINI_FREE_TIER_MIN_INTERVAL = 0.05  # seconds; Tier 1 billing (4K RPM) makes real pacing unnecessary — this is just a floor against literally back-to-back requests, real limit enforcement is the 429 retry/backoff below
 _last_gemini_call_time = 0.0
 
 # --- Local Qwen via Ollama (secondary fallback) ---

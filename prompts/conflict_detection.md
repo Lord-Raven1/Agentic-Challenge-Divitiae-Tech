@@ -21,14 +21,17 @@ identical data for all three):**
 | keyword heuristic | 4/15 (27%) |
 | local Qwen2.5-3B (Ollama) | 1/15 (7%) |
 
-Gemini is the clear winner on accuracy, so it's the primary backend.
-Its free tier caps at 15 requests/minute (500/day is not a real
-constraint), so `conflict_llm.py` self-paces calls and retries on HTTP 429
-rather than giving up instantly. If Gemini is unreachable (no API key,
-network failure, quota/billing issue), it falls back to local Qwen — no
-rate limit since it runs on our own GPU, but far weaker accuracy. If
-Ollama is also unreachable, it falls back to the keyword list, which is
-free, instant, and needs no external service at all.
+Gemini is the clear winner on accuracy, so it's the primary backend. The
+project is on Tier 1 billing (4K RPM / 150K RPD for gemini-3.5-flash-lite),
+so `conflict_llm.py` no longer needs to self-pace calls — the earlier free
+tier (15 RPM) required ~5s/call pacing, which is gone now. It still retries
+on HTTP 429 as a safety net (e.g. a transient issue or if billing ever
+lapses) and fails fast on permanent errors like a depleted balance rather
+than wasting retries. If Gemini is unreachable (no API key, network
+failure, billing issue), it falls back to local Qwen — no rate limit since
+it runs on our own GPU, but far weaker accuracy. If Ollama is also
+unreachable, it falls back to the keyword list, which is free, instant,
+and needs no external service at all.
 
 This ordering means the frozen judged run degrades gracefully rather than
 failing outright if any one dependency (API key, network, local GPU) isn't
