@@ -17,7 +17,7 @@ from src.data_loader import load_all_scenarios, create_scenario_from_upload
 from src.replay_engine import ReplayEngine
 from src.agent_bridge import to_json_line
 from src.components.style import apply_custom_css
-from src.components.replay_controls import render_replay_controls
+from src.components.replay_controls import render_replay_controls, drive_autoplay
 from src.views.incoming_report import render_incoming_report_view
 from src.views.decision_log import render_decision_log_view
 from src.views.incident_summary import render_incident_summary_view
@@ -176,6 +176,13 @@ def main():
         render_incident_summary_view(replay_engine)
     elif current_view == VIEW_ACTION_HISTORY:
         render_action_history_view(replay_engine)
+
+    # Must run last: advances one tick and reruns if Play is active. Doing
+    # this after the view above has rendered means the just-advanced
+    # report/incident state is actually painted each step, instead of
+    # frozen while the engine silently keeps advancing (st.rerun() aborts
+    # everything after its call site, so this can't run any earlier).
+    drive_autoplay(replay_engine)
 
 
 if __name__ == "__main__":
